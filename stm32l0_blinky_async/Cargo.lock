@@ -141,21 +141,21 @@ dependencies = [
 
 [[package]]
 name = "futures-core"
-version = "0.3.26"
+version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec90ff4d0fe1f57d600049061dc6bb68ed03c7d2fbd697274c41805dcb3f8608"
+checksum = "4bca583b7e26f571124fe5b7561d49cb2868d79116cfa0eefce955557c6fee8c"
 
 [[package]]
 name = "futures-task"
-version = "0.3.26"
+version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dcf79a1bf610b10f42aea489289c5a2c478a786509693b80cd39c44ccd936366"
+checksum = "76d3d132be6c0e6aa1534069c705a74a5997a356c0dc2f86a47765e5617c5b65"
 
 [[package]]
 name = "futures-util"
-version = "0.3.26"
+version = "0.3.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c1d6de3acfef38d2be4b1f543f553131788603495be83da675e180c8d6b7bd1"
+checksum = "26b01e40b772d54cf6c6d721c1d1abd0647a0106a12ecaa1c186273392a69533"
 dependencies = [
  "futures-core",
  "futures-task",
@@ -344,8 +344,9 @@ dependencies = [
 
 [[package]]
 name = "rtic"
-version = "2.0.0-alpha.0"
-source = "git+https://github.com/rtic-rs/rtic#7c7d6558f6d9c50fbb4d2487c98c9a5be15f2f7b"
+version = "2.0.0-alpha.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d6329eb5608cb1433facf2743418793d5d3cc4e64ca7a9f9351d5c9406fb7410"
 dependencies = [
  "atomic-polyfill",
  "bare-metal 1.0.0",
@@ -358,7 +359,8 @@ dependencies = [
 [[package]]
 name = "rtic-common"
 version = "1.0.0-alpha.0"
-source = "git+https://github.com/rtic-rs/rtic#7c7d6558f6d9c50fbb4d2487c98c9a5be15f2f7b"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e39633693d25d7b93f0e6945a7b0190eb6164725749408f9ada0c2d335a2799f"
 dependencies = [
  "critical-section",
 ]
@@ -371,8 +373,9 @@ checksum = "d9369355b04d06a3780ec0f51ea2d225624db777acbc60abd8ca4832da5c1a42"
 
 [[package]]
 name = "rtic-macros"
-version = "2.0.0-alpha.0"
-source = "git+https://github.com/rtic-rs/rtic#7c7d6558f6d9c50fbb4d2487c98c9a5be15f2f7b"
+version = "2.0.0-alpha.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "475a86efa17f066baa3a4baabc775267017fb080b6c7f859374c25b54349c94b"
 dependencies = [
  "indexmap",
  "proc-macro-error",
@@ -383,8 +386,9 @@ dependencies = [
 
 [[package]]
 name = "rtic-monotonics"
-version = "1.0.0-alpha.0"
-source = "git+https://github.com/rtic-rs/rtic#7c7d6558f6d9c50fbb4d2487c98c9a5be15f2f7b"
+version = "1.0.0-alpha.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4f42b724991de7f6eae871dffe39b9f4729ccc3fff3249f6c3f7dd3ff022ebfb"
 dependencies = [
  "atomic-polyfill",
  "cfg-if",
@@ -395,8 +399,9 @@ dependencies = [
 
 [[package]]
 name = "rtic-time"
-version = "1.0.0-alpha.0"
-source = "git+https://github.com/rtic-rs/rtic#7c7d6558f6d9c50fbb4d2487c98c9a5be15f2f7b"
+version = "1.0.0-alpha.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8577ddf098e59f08579245f5943366afa098c1b52c6ed90d028c357c85ef905c"
 dependencies = [
  "critical-section",
  "futures-util",
@@ -459,18 +464,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
-name = "stm32f3-blinky"
-version = "0.1.0"
-dependencies = [
- "embedded-hal",
- "panic-rtt-target",
- "rtic",
- "rtic-monotonics",
- "rtt-target",
- "stm32l0xx-hal",
-]
-
-[[package]]
 name = "stm32l0"
 version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -480,6 +473,18 @@ dependencies = [
  "cortex-m",
  "cortex-m-rt",
  "vcell",
+]
+
+[[package]]
+name = "stm32l0-blinky"
+version = "0.1.0"
+dependencies = [
+ "embedded-hal",
+ "panic-rtt-target",
+ "rtic",
+ "rtic-monotonics",
+ "rtt-target",
+ "stm32l0xx-hal",
 ]
 
 [[package]]

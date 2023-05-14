@@ -1,21 +1,32 @@
 [package]
-authors = ["Simsys <winfried.simon@gmail.com>"]
+authors = ["Sajjad <Sajjd7997@gmail.com>"]
 edition = "2021"
 readme = "README.md"
-name = "stm32f3-blinky"
+name = "stm32l0-blinky"
 version = "0.1.0"
+
+[workspace]
+
+[dependencies.rtic]
+version = "=2.0.0-alpha.2"
+features = ["thumbv6-backend"]
+
+[dependencies.rtic-monotonics]
+version = "=1.0.0-alpha.2"
+features = ["cortex-m-systick"]
 
 [dependencies]
 embedded-hal = "0.2.7"
-rtic = { git = "https://github.com/rtic-rs/rtic", features = ["thumbv6-backend"] }
-rtic-monotonics = { git = "https://github.com/rtic-rs/rtic", features = ["cortex-m-systick"] }
 panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
 rtt-target = { version = "0.3.1", features = ["cortex-m"] }
-stm32l0xx-hal = { version = "0.9.0", features = ["mcu-STM32L051C8Tx", "rt"] }
+
+[dependencies.stm32l0xx-hal]
+features = ["mcu-STM32L051C8Tx", "rt"]
+version = "0.9.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "stm32f3-blinky"
+name = "stm32l0-blinky"
 test = false
 bench = false
 
