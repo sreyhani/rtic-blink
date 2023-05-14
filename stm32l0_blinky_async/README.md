@@ -1,18 +1,12 @@
-# STM32F3 RTIC Blink example
+# STM32L0 RTIC Blink example
 
-Working example of simple LED blinking application for STM32 F303 Nucleo-64 board based on the STM32F303RE chip. Example uses schedule API and peripherials access. This example is based on blue-pill blinky example.
+Working example of simple LED blinking application for STM32L051C8 board. Example uses async await and peripherials access. This example is based on the example in [rtic repository](https://github.com/rtic-rs/rtic/tree/master/examples/stm32f3_blinky).
 
 ## How-to
 
 ### Build
 
 Run `cargo +nightly build` to compile the code. If you run it for the first time, it will take some time to download and compile dependencies.
-
-After that, you can use for example the cargo-embed tool to flash and run it
-
-```bash
-$ cargo +nightly embed
-```
 
 ### Setup environment, flash and run program
 
