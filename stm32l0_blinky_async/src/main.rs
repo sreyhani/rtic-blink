@@ -58,14 +58,13 @@ mod app {
     async fn blink(cx: blink::Context) {
         loop {
             rprintln!("blink");
-            if *cx.local.state {
                 cx.local.led.set_high().unwrap();
                 *cx.local.state = false;
-            } else {
+                Systick::delay(300.millis()).await;
                 cx.local.led.set_low().unwrap();
                 *cx.local.state = true;
-            }
-            Systick::delay(1000.millis()).await;
+                Systick::delay(300.millis()).await;
+
         }
     }
 }
